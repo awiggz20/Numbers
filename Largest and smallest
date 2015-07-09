@@ -1,0 +1,25 @@
+print "Enter multiple numbers.\nThe program will choose your highest and lowest number."
+maximum = None
+minimum = None
+
+while True:
+    inp = raw_input('Enter a number: ')
+    if inp == 'done':
+        break
+    if len(inp) < 1:
+        break
+
+    try:
+        num = int(inp)
+    except:
+        print "Invalid input"
+        continue
+
+    if maximum is None or num > maximum:
+        maximum = num
+
+    if minimum is None or num < minimum:
+        minimum = num
+
+print 'Maximum is', maximum
+print 'Minimum is', minimum
